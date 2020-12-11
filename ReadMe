@@ -1,1 +1,9 @@
-https://kubernetes.github.io/ingress-nginx/user-guide/monitoring/ for launching prometheus on k8tes
+This is my final project for CSCI4253 it is a Network Analyzer. 
+This program runs similarly to our Lab-7 where in my case you must launch this on the google cloud to active correctly
+
+To get started pull this repository to your cloud console
+Next execute the launcher.sh
+  This will activate all the Kubernetes pods, services, and ingress. 
+  
+ I have not tested this on any account other than mine, so your results may vary depending on your account settings. 
+    If you need help running this project please contact me and I will assist you, or prove that this works for grading purposes.

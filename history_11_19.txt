@@ -1,0 +1,536 @@
+    1  clear
+    2  docker login --chbe3706
+    3  docker login --username=chbe3706
+    4  docker push chbe3706/docker-logs
+    5  docker push docker-logs
+    6  docker build -f Dockerfile-logs -t chbe3706/docker-logs .
+    7  docker push chbe3706/docker-logs
+    8  history 5 
+    9  history 7
+   10  history 8 > dockerRegistry.txt 
+   11  vim dockerRegistry.txt 
+   12  kubectl apply -f logs-deployment.yaml 
+   13  kubectl get pods
+   14  kubectl describe pod logs-deployment-5d56
+   15  kubectl apply -f logs-deployment.yaml 
+   16  kubectl get pods
+   17  kubectl describe pod logs-deployment-6447
+   18  kubectl get pods
+   19  kubectl describe pod logs-deployment-6447
+   20  docker ps -a
+   21  kubectl apply -f redis/redis-deployment.yaml
+   22  kubectl apply -f redis/redis-service.yaml
+   23  kubectl apply -f rabbitmq/rabbitmq-deployment.yaml
+   24  kubectl apply -f rabbitmq/rabbitmq-service.yaml
+   25  kubectl wait pod --for=condition=ready --all --timeout 10m
+   26  cd ..
+   27  kubectl apply -f redis/redis-deployment.yaml
+   28  kubectl apply -f redis/redis-service.yaml
+   29  kubectl apply -f rabbitmq/rabbitmq-deployment.yaml
+   30  kubectl apply -f rabbitmq/rabbitmq-service.yaml
+   31  kubectl wait pod --for=condition=ready --all --timeout 10m
+   32  kube ctl get pods
+   33  kubectl get pods
+   34  cd rest/
+   35  docker ps -a
+   36  kubectl apply -f logs-deployment.yaml 
+   37  kubectl get pod
+   38  kubectl describe logs-deployment-6647
+   39  kubectl get pod
+   40  kubectl describe logs-deployment-6447
+   41  kubectl describe pod logs-deployment-6447498f9d-7chr8
+   42  kubectl get pods
+   43  kubectl logs logs-deployment-6447498f9d-7chr8
+   44  kubectl logs logs-deployment-6447498f9d-7chr8 -p
+   45  kubectl apply -f logs-deployment.yaml 
+   46  kubectl get pod
+   47  kubectl logs logs-deployment-648499b667-6l9q -p
+   48  kubectl logs logs-deployment-648499b667-6l9qk -p
+   49  pwd
+   50  kubectl apply -f logs-deployment.yaml 
+   51  kubectl get pod
+   52  kubectl logs logs-deployment-7b78866567-mpltz -p
+   53  ls /home/bentle_christ26/lab-7-facerec-kube-chbe3706/rest/
+   54  kubectl apply -f logs-deployment.yaml 
+   55  kubectl get pod
+   56  kubectl logs logs-deployment-76b9f68986-qtpld -p
+   57  clear
+   58  kubectl apply -f logs-deployment.yaml 
+   59  kubectl get pod
+   60  kubectl logs logs-deployment-6764988478-cqjd6 -p
+   61  kubectl apply -f logs-deployment.yaml 
+   62  kubectl get pod
+   63  kubectl logs logs-deployment-6764988478-cqjd6 -p
+   64  kubectl logs logs-deployment-5c4f588765-wsc76 -p
+   65  kubectl apply -f logs-deployment.yaml  -it
+   66  kubectl apply --help
+   67  kubectl apply -f logs-deployment.yaml  -it
+   68  kubectl apply -f logs-deployment.yaml
+   69  kubectl get pod
+   70  kubectl logs logs-deployment-69667f5674-t924d -p
+   71  docker build -f Dockerfile-logs -t chbe3706/docker-logs .
+   72  docker push chbe3706 docker-logs
+   73  docker push chbe3706/docker-logs
+   74  kubectl apply -f logs-deployment.yaml
+   75  kubectl get pod
+   76  kubectl delete logs-deployment-69667f5674-t924d
+   77  kubectl delete pod logs-deployment-69667f5674-t924d
+   78  kubectl apply -f logs-deployment.yaml
+   79  kubectl get pod
+   80  kubectl logs logs-deployment-69667f5674-t924d -p
+   81  kubectl logs logs-deployment-69667f5674-w9qc8 -p
+   82  RABBITMQ_HOST.redis.info
+   83  redis.info
+   84  kubectl pod
+   85  kubectl get pod
+   86  kubectl describe pod rabbit
+   87  clear
+   88  kubectl get pod
+   89  kubectl logs logs-deployment-69667f5674-w9qc8 -p
+   90  kubectl describe pod redis
+   91  curl 10.0.1.3:5672
+   92  ping 10.0.1.3:5672
+   93  ping 10.0.1.3 5672
+   94  kubectl get pods
+   95  kubectl apply -f logs-deployment.yaml
+   96  kubectl get pod
+   97  kubectl logs logs-deployment-5bc68f7975-ccbcg -p
+   98  python3 logs.py
+   99  cd ../rest
+  100  python3 logs.py
+  101  python3 logs.py 10.0.1.3
+  102  python3 logs.py -- RABBITMQ_HOST = 10.0.1.3
+  103  export RABBITMQ_HOST=10.0.1.3
+  104  python3 logs.py
+  105  cd ..
+  106  git status
+  107  git add rest/Dockerfile-rest rest/Dockerfile-logs rest/logs-deployment.yaml worker/Dockerfile-worker worker/worker-server.py 
+  108  git commit -m "updates to docker elements"
+  109  git push
+  110  kubectl logs rabbitmq-848578f859-b26rx
+  111  kubectl
+  112  kubectl describe
+  113  kubectl cluster-info
+  114  rabbitmq_NODENAME
+  115  kubectl rabbitmq_NODENAME
+  116  kucectl get pod
+  117  kucectl get pods
+  118  kubectl get pods
+  119  kubectl describe service/rabbitmq
+  120  curl 10.3.253.92:5672
+  121  ping 10.3.253.92 5672
+  122  kubectl describe service/rabbitmq[6]
+  123  kubectl get pods
+  124  kubectl logs logs-deployment-5bc68f7975-ccbcg -p
+  125  kubectl describe service/rabbitmq
+  126  export RABBITMQ_HOST=10.3.253.92
+  127  kubectl apply -f logs-deployment.yaml
+  128  kubectl get pods
+  129  kubectl logs log-deployment-8485 -p
+  130  kubectl logs logs-deployment-bd455fd-8qql9 -p
+  131  gcloud config set project firm-amp-292119
+  132  gcloud config set compute/zone us-central1-b
+  133  gcloud container clusters delete mykube
+  134  cd lab-7-facerec-kube-chbe3706/
+  135  clear
+  136  bash launcher.sh 
+  137  gcloud config set project firm-amp-292119
+  138  gcloud config set compute/zone us-central1-b
+  139  gcloud config set project firm-amp-292119
+  140  gcloud config set compute/zone us-central1-b
+  141  gcloud config set project firm-amp-292119
+  142  gcloud config set compute/zone us-central1-b
+  143  gcloud config set project firm-amp-292119
+  144  gcloud config set compute/zone us-central1-b
+  145  docker image
+  146  docker images
+  147  docker build -f Dockerfile-logs -t chbe3706/docker-logs .
+  148  cd lab-7-facerec-kube-chbe3706/res
+  149  cd lab-7-facerec-kube-chbe3706/rest/
+  150  docker build -f Dockerfile-logs -t chbe3706/docker-logs .
+  151  docker pull chbe3706/docker-logs
+  152  docker pull chbe3706/docker-rest
+  153  docker build -f Dockerfile-rest -t chbe3706/docker-rest .
+  154  docker push docker-rest
+  155  docker push chbe3706/docker-rest
+  156  cd ../worker/
+  157  docker build -f Dockerfile-worker -t chbe3706/docker-worker .
+  158  docker push chbe3706/docker-worker
+  159  docker image
+  160  docker images
+  161  gcloud container clusters delete mykube
+  162  cd lab-
+  163  cd lab-7-facerec-kube-chbe3706/
+  164  cd lab-7-facerec-kube-chbe3706/rest/
+  165  cd lab-7-facerec-kube-chbe3706/rest/
+  166  cd lab-7-facerec-kube-chbe3706/worker
+  167  docker pull chbe3706/docker-logs
+  168  docker pull chbe3706/docker-rest
+  169  docker pull chbe3706/docker-worker
+  170  bash launcher.sh 
+  171  kubectl get svc
+  172  kubectl apply -f rest-deployment.yaml 
+  173  kubectl apply -f rest-service.yaml 
+  174  kubectl get pod
+  175  apiVersion: v1
+  176  kind: Service
+  177  metadata:
+  178  spec:
+  179  kubectl apply -f worker-deployment.yaml 
+  180  kubectl get pod
+  181  kubectl logs worker-7bc94699fd-mhj96 -p
+  182  kubectl logs pod worker-7bc94699fd-mhj96 -p
+  183  kubectl logs worker-7bc94699fd-mhj96 -p
+  184  kubectl apply -f worker-deployment.yaml 
+  185  kubectl logs worker-7bc94699fd-mhj96 -p
+  186  kubectl get pod
+  187  kubectl
+  188  kubectl delete pods,services -l name=worker
+  189  kubectl describe pod worker-7bc94699fd-mhj96
+  190  kubectl delete pods,services -l app=worker
+  191  kubectl apply -f worker-deployment.yaml 
+  192  kubectl get pod
+  193  kubectl delete pods,services -l app=worker
+  194  kubectl get pod
+  195  kubectl delete pods,services -l app=worker
+  196  kubectl get pod
+  197  dcoker images
+  198  docker images
+  199  kubectl apply -f logs-deployment.yaml 
+  200  kubectl get pod
+  201  kubectl describe pod logs-865c8b7987-bhgjv
+  202  kubectl logs logs-865c8b7987-bhgjv -p
+  203  kubectl apply -f worker-deployment.yaml 
+  204  kubectl get pod
+  205  kubectl apply -f worker-deployment.yaml 
+  206  kubectl get pod
+  207  kubectl get pod -a
+  208  kubectl get pod a
+  209  kubectl get pods
+  210  kubectl logs worker-96496758d-t67b5 -p
+  211  kubectl apply -f worker-deployment.yaml 
+  212  kubectl delete pods,services -l app=worker
+  213  kubectl get pods
+  214  kubectl
+  215  kubectl delete -f pods,services -l app=worker
+  216  kubectl delete pods,services -f -l app=worker
+  217  kubectl delete pods -f worker
+  218  kubectl delete pods -f worker-7bc94699fd-ngnln
+  219  kubectl delete pod -f worker-7bc94699fd-ngnln
+  220  kubectl delete pod
+  221  kubectl delete pod --help
+  222  kubectl delete pods,services -l app=worker --force
+  223  kubectl get pods
+  224  kubectl get nodes
+  225  kubectl get pod
+  226  kubectl logs worker-7bc94699fd-6dg4s -p
+  227  docker build -f Dockerfile-worker -t chbe3706/docker-worker
+  228  docker build -f Dockerfile-worker -t chbe3706/docker-worker .
+  229  docker push chbe3706/docker-worker
+  230  kubectl apply -f worker-deployment.yaml 
+  231  kubectl get pods
+  232  kubectl stop pods,services -l app=worker --force
+  233  kubectl stop pods,services -l app=worker
+  234  kubectl
+  235  kubectl get pods
+  236  kubectl stop pod worker-7bc94699fd-6dg4s
+  237  kubectl stop pods,services -l app=worker --force
+  238  kubectl delete pods,services -l app=worker --force
+  239  kubectl get pods
+  240  kubectl logs worker-96496758d-hjbtm -p
+  241  kubectl get svc
+  242  kubectl logs rest-77d7ffb94b-h64fr -p
+  243  kubectl logs rest-77d7ffb94b-h64fr
+  244  kubectl apply -f rest-deployment.yaml 
+  245  kubectl get pods
+  246  kubectl logs rest-6d6b69544d-hh9jh -p
+  247  kubectl logs rest-6d6b69544d-hh9jh
+  248  git statuw
+  249  git status
+  250  cd ..
+  251  git status
+  252  git add rest/logs-deployment.yaml rest/rest-deployment.yaml rest/rest-ingress.yaml rest/rest-service.yaml worker/Dockerfile-worker worker/worker-deployment.yaml worker/worker-server.py 
+  253  git commit -m "working rest/logs yamls"
+  254  git push
+  255  kubectl apply -f worker-deployment.yaml 
+  256  kubectl get pods
+  257  kubectl logs worker-646bdd647-kspkl -p
+  258  kubectl decribe svc
+  259  kubectl describe svc
+  260  ip a
+  261  docker build -f Dockerfile-worker -t chbe3706/docker-worker .
+  262  docker push chbe3706/docker-worker
+  263  kubectl apply -f worker-deployment.yaml 
+  264  kubectl get pods
+  265  kubectl apply -f worker-deployment.yaml 
+  266  kubectl get pods
+  267  gcloud container clusters delete mykube
+  268  cd lab-7-facerec-kube-chbe3706/
+  269  cd lab-7-facerec-kube-chbe3706/rest/
+  270  lab-7-facerec-kube-chbe3706/res
+  271  cd lab-7-facerec-kube-chbe3706/worker/
+  272  bash launcher.sh 
+  273  docker login --help
+  274  docker pull chbe3706/docker-logs
+  275  docker pull chbe3706/docker-rest
+  276  docker pull chbe3706/docker-worker
+  277  kubectl apply -f rest-deployment.yaml 
+  278  kubectl apply -f rest-service.yaml 
+  279  kubectl apply -f logs-deployment.yaml 
+  280  kubectl apply -f worker-deployment.yaml 
+  281  kubectl get pod
+  282  gcloud container clusters update mykube --update-addons=HttpLoadBalancing=ENABLED
+  283  kubectl port-forward --address 0.0.0.0 service/rabbitmq 5672:5672 &
+  284  kubectl port-forward --address 0.0.0.0 service/redis 6379:6379 &
+  285  cd lab-7-facerec-kube-chbe3706/rest/
+  286  kubectl apply -f my-ingress.yaml
+  287  kubectl apply -f rest-ingress.yaml 
+  288  kubectl get ingress my-ingress --output yaml
+  289  kubectl get ingress rest-ingress.yaml --output yaml
+  290  kubectl get svc
+  291  kubectl apply -f rest-ingress.yaml 
+  292  kubectl get ingress my-ingress --output yaml
+  293  kubectl get pod
+  294  ip a
+  295  kubectl
+  296  kubectl describe
+  297  kubectl describe pod
+  298  clear
+  299  kubectl describe ingress
+  300  curl http://34.120.180.153
+  301  kubectl describe ingress
+  302  kubectl get pods
+  303  kubectl logs rest-6d6b69544d-5p22d
+  304  cd ../rest
+  305  clear
+  306  kubectl get pods
+  307  kubectl exec rest-6d6b69544d-5p22d
+  308  kubectl exec rest-6d6b69544d-5p22d -- cat rest-server.py
+  309  docker build -f Dockerfile-rest -t chbe3706/docker-rest
+  310  docker build -f Dockerfile-rest -t chbe3706/docker-rest .
+  311  kubectl exec rest-6d6b69544d-5p22d -- cat rest-server.py
+  312  docker push chbe3706/docker-rest
+  313  kubectl apply -f rest-deployment.yaml 
+  314  kubectl exec rest-6d6b69544d-5p22d -- cat rest-server.py
+  315  docker build -f Dockerfile-rest -t chbe3706/docker-rest/v1 .
+  316  kubectl apply -f rest-deployment.yaml 
+  317  kubectl get pod
+  318  docker push chbe3706/docker-rest/v1
+  319  docker login
+  320  docker push chbe3706/docker-rest/v1
+  321  docker build -f Dockerfile-rest -t chbe3706/docker-rest:v1 .
+  322  kubectl apply -f rest-deployment.yaml 
+  323  kubectl get pod
+  324  kubectl logs rest-65d854b7bf-dxcht
+  325  docker push chbe3706/docker-rest:v1
+  326  kubectl apply -f rest-deployment.yaml 
+  327  kubectl get pod
+  328  kubectl exec rest-7898d66f9-hvnkm -- cat rest-server.py
+  329  kubectl describe ingress
+  330  kubectl get pod
+  331  kubectl delete pod rest-7898d66f9-hvnkm
+  332  kubectl get pod
+  333  kubectl delete pod rest-65d854b7bf-jvltv
+  334  kubectl get pod
+  335  kubectl exec rest-65d854b7bf-9tldk -- cat rest-server.py
+  336  curl http://34.120.180.153
+  337  bash sample-rest-client.sh 
+  338  curl http://34.120.180.153/url/https://storage.googleapis.com/cu-csci-5253/lfw/Zico/Zico_0003.jpg/10
+  339  curl http://34.120.180.153/url/'https://storage.googleapis.com/cu-csci-5253/lfw/Zico/Zico_0003.jpg'/10
+  340  curl http://34.120.180.153/match/xzyyzx
+  341  kubectl get ingress my-ingress --output yaml
+  342  kubectl describe ingress
+  343  python3 rest-client.py 34.120.180.153:5000 match zxxiwn
+  344  python3 rest-client.py 34.120.180.153:5000 match zxxiwn 1
+  345  clear
+  346  python3 rest-client.py 34.120.180.153 image testimg.jpg 1
+  347  python3 rest-client.py localhost image testimg.jpg 1
+  348  python3 rest-client.py localhost match xsadasad
+  349  python3 rest-client.py localhost match xsadasad 1
+  350  python3 rest-server.py 
+  351  python3 rest-client.py localhost match 4567845678 1
+  352  python3 rest-client.py localhost image testimg.jpg 1
+  353  kubectl get pods
+  354  kubectl delete all
+  355  kubectl delete --all
+  356  python3 logs.py 
+  357  kubectl delete pod --all
+  358  kubectl get pods
+  359  clear
+  360  kubectl 
+  361  kubectl delete
+  362  kubectl deployment
+  363  kubectl --help
+  364  clear
+  365  gcloud container clusters delete mykube
+  366  bash launcher.sh 
+  367  kubectl port-forward --address 0.0.0.0 service/rabbitmq 5672:5672 &
+  368  kubectl port-forward --address 0.0.0.0 service/redis 6379:6379 &
+  369  kubedtl get pod
+  370  kubectl get pod
+  371  kubectl port-forward --address 0.0.0.0 service/rabbitmq 5672:5672 &
+  372  kubectl port-forward --address 0.0.0.0 service/redis 6379:6379 &
+  373  kubectl port-forward --address 0.0.0.0 service/rabbitmq 5672:5672 &
+  374  kubectl port-forward --address 0.0.0.0 service/redis 6379:6379 &
+  375  mkdir rest-back
+  376  cd rest-back/
+  377  vim rest-service.bk
+  378  python3 rest-client.py localhost image testimg.jpg 1
+  379  cd ..
+  380  python3 rest-client.py localhost image testimg.jpg 1
+  381  ps augxww | grep port-forward
+  382  kubectl port-forward --address 0.0.0.0 service/rabbitmq 5672:5672 &
+  383  kubectl port-forward --address 0.0.0.0 service/redis 6379:6379 &
+  384  gcloud container clusters delete mykube
+  385  bash launcher.sh 
+  386  python3 rest-client.py localhost:5000 image testimg.jpg 1
+  387  python3 rest-client.py localhost:5000 url https://storage.googleapis.com/cu-csci-5253/lfw/AJ_Lamas/AJ_Lamas_0001.jpg 1
+  388  python3 rest-client.py localhost:5000 match 8008189918619889169 1
+  389  python3 rest-client.py localhost:5000 match -9223363244640103500 1
+  390  python3 rest-client.py localhost:5000 match 8008189918619889169 1
+  391  python3 worker/worker-server.py 
+  392  python3 rest-client.py localhost:5000 url https://storage.googleapis.com/cu-csci-5253/lfw/AJ_Lamas/AJ_Lamas_0001.jpg 1
+  393  python3 rest-client.py localhost:5000 match 8008189918619889169 1
+  394  redis.Redis(host=redisHost, db=2).exists(8008189918619889169)
+  395  redis.Redis(host=localhost, db=2).exists(8008189918619889169)
+  396  redis.Redis(host=localhost:5000, db=2).exists(8008189918619889169)
+  397  python3 rest-client.py localhost:5000 image testimg.jpg 1
+  398  python3 rest-client.py localhost:5000 url https://storage.googleapis.com/cu-csci-5253/lfw/AJ_Lamas/AJ_Lamas_0001.jpg 1
+  399  python3 rest-client.py localhost:5000 match 450685914754321928 1
+  400  python3 rest-client.py localhost:5000 url https://storage.googleapis.com/cu-csci-5253/lfw/AJ_Lamas/AJ_Lamas_0001.jpg 1
+  401  python3 rest-client.py localhost:5000 match 450685914754321928 1
+  402  pip3 install face_recognition
+  403  python3 rest-client.py localhost:5000 image testimg.jpg 1
+  404  python3 rest-client.py localhost:5000 match 450685914754321928 1
+  405  python3 rest-client.py localhost:5000 image testimg.jpg 1
+  406  python3 rest-client.py localhost:5000 url https://storage.googleapis.com/cu-csci-5253/lfw/AJ_Lamas/AJ_Lamas_0001.jpg 1
+  407  python3 rest-client.py localhost:5000 match 450685914754321928 1
+  408  python3 rest-client.py localhost:5000 image testimg.jpg 1
+  409  python3 rest-client.py localhost:5000 url https://storage.googleapis.com/cu-csci-5253/lfw/Aaron_Eckhart/Aaron_Eckhart_0001.jpg 1
+  410  python3 rest-client.py localhost:5000 url https://storage.googleapis.com/cu-csci-5253/lfw/Aaron_Guiel/Aaron_Guiel_0001.jpg 1
+  411  python3 rest-client.py localhost:5000 match 3084782801353337469 1
+  412  cd ..
+  413  git status
+  414  git add launcher.sh rabbitmq/rabbitmq-deployment.yaml rest/rest-deployment.yaml rest/rest-ingress.yaml rest/rest-server.py worker/worker-deployment.yaml worker/worker-server.py 
+  415  git commit -m "docker launches and .py scripts work again"
+  416  git push
+  417  python3 rest-client.py localhost:5000 image testimg.jpg 1
+  418  cd rest/
+  419  python3 rest-client.py localhost:5000 image testimg.jpg 1
+  420  cd lab-7-facerec-kube-chbe3706/
+  421  cd lab-7-facerec-kube-chbe3706/rest/
+  422  cd lab-7-facerec-kube-chbe3706/rest/
+  423  cd lab-7-facerec-kube-chbe3706/rest/
+  424  bash launcher.sh 
+  425  cd ../worker/
+  426  python3 rest-client.py localhost:5000 image testimg.jpg 1
+  427  python3 worker-server.py 
+  428  python3 rest-client.py localhost:5000 url https://storage.googleapis.com/cu-csci-5253/lfw/Aaron_Guiel/Aaron_Guiel_0001.jpg 1
+  429  python3 rest-server.py 
+  430  python3 rest-client.py localhost:5000 match 2edf6464b7fa6b484747e55918d4027d84d5348a192f8c47131cc161f9db065f 1
+  431  python3 rest-client.py localhost:5000 match '2edf6464b7fa6b484747e55918d4027d84d5348a192f8c47131cc161f9db065f' 1
+  432  python3 rest-client.py localhost:5000 match 2edf6464b7fa6b484747e55918d4027d84d5348a192f8c47131cc161f9db065f 1
+  433  python3 rest-client.py localhost:5000 url https://storage.googleapis.com/cu-csci-5253/lfw/Aaron_Guiel/Aaron_Guiel_0001.jpg 1
+  434  python3 rest-client.py localhost:5000 match "2edf6464b7fa6b484747e55918d4027d84d5348a192f8c47131cc161f9db065f" 1
+  435  python3 rest-client.py localhost:5000 match 2edf6464b7fa6b484747e55918d4027d84d5348a192f8c47131cc161f9db065f 1
+  436  python3 rest-client.py localhost:5000 match "2edf6464b7fa6b484747e55918d4027d84d5348a192f8c47131cc161f9db065f" 1
+  437  bash sample-rest-client.sh 
+  438  cd ..
+  439  ls
+  440  git status
+  441  git add rest/rest-server.py 
+  442  git commit -m "server working, next -> test docker"
+  443  git push
+  444  clear
+  445  clear
+  446  clear
+  447  python3 rest/logs.py 
+  448  clear
+  449  gcloud container clusters delete mykube
+  450  bash launcher.sh 
+  451  kubectl get pod
+  452  kubectl get --all
+  453  kubectl get -all
+  454  kubectl get svc
+  455  kubectl apply -f rest/rest-ingress.yaml
+  456  kubectl get svc
+  457  kubectl get pod
+  458  kubectl describe ingress
+  459  kubectl get ingress rest-ingress --output yaml
+  460  kubectl get ingress my-ingress --output yaml
+  461  kubectl describe ingress rest-ingress
+  462  kubectl describe ingress my-ingress
+  463  export REST=34.120.180.153
+  464  bash rest/sample-rest-client.sh 
+  465  curl http://$REST:5000/url/https://storage.googleapis.com/cu-csci-5253/lfw/Aaron_Patterson/Aaron_Patterson_0001.jpg/1
+  466  cd rest
+  467  ls
+  468  bash sample-rest-client.sh 
+  469  python3 rest-client.py http://34.120.180.153:5000 image testimg.jpg 1
+  470  python3 rest-client.py 34.120.180.153:5000 image testimg.jpg 1
+  471  kubectl get all
+  472  kubectl describe ingress my-ingress
+  473  kubectl port-forward --address 0.0.0.0 service/rabbitmq 5672:5672 &
+  474  kubectl port-forward --address 0.0.0.0 service/redis 6379:6379 &
+  475  python3 rest-client.py 34.120.180.153:5000 image testimg.jpg 1
+  476  kubectl port-forward service rest-server 5000:5000 &
+  477  kubectl getpods
+  478  kubectl get pods
+  479  kubectl get svc
+  480  kubectl port-forward service rest-service 5000:5000 &
+  481  kubectl get pods
+  482  kubectl port-forward service rest-service 5000:5000 &
+  483  kubectl port-forward service rest-service 5000:5000
+  484  kubectl port-forward service rest-server 5000:5000
+  485  kubectl describe ingress my-ingress
+  486  curl http://34.120.180.153:5000/
+  487  curl http://34.120.180.153/scan/image/testimg.jpg
+  488  curl http://34.120.180.153/scan/url/https://storage.googleapis.com/cu-csci-5253/lfw/Aaron_Patterson/Aaron_Patterson_0001.jpg
+  489  curl http://34.120.180.153/scan/url/"https://storage.googleapis.com/cu-csci-5253/lfw/Aaron_Patterson/Aaron_Patterson_0001.jpg"
+  490  curl http://34.120.180.153/scan/"https://storage.googleapis.com/cu-csci-5253/lfw/Aaron_Patterson/Aaron_Patterson_0001.jpg"
+  491  curl http://34.120.180.153/scan/https://storage.googleapis.com/cu-csci-5253/lfw/Aaron_Patterson/Aaron_Patterson_0001.jpg
+  492  curl http://34.120.180.153/scan/storage.googleapis.com/cu-csci-5253/lfw/Aaron_Patterson/Aaron_Patterson_0001.jpg
+  493  curl http://34.120.180.153/match/3rtgbbv6d78i2
+  494  curl http://34.120.180.153/
+  495  kubectl get pod
+  496  kubectl logs logs-6459ff5d77-b9p6n
+  497  kubectl logs rest-7f7dcccb5f-gqhw8
+  498  gcloud container clusters delete mykube
+  499  kubectl port-forward service/rest-service 5000:5000
+  500  gcloud container clusters delete mykube
+  501  cd lab-7-facerec-kube-chbe3706/
+  502  bash launcher.sh 
+  503  kubectl get all
+  504  kubectl describe ingress my-ingress
+  505  curl http://34.120.180.153/
+  506  kubectl get pod
+  507  kubectl get all
+  508  kubectl port-forward --address 0.0.0.0 service/rabbitmq 5672:5672 &
+  509  kubectl port-forward --address 0.0.0.0 service/redis 6379:6379 &
+  510  kubectl apply -f rest/rest-deployment.yaml && kubectl apply -f rest/rest-service.yaml &&
+  511  kubectl apply -f rest/rest-deployment.yaml
+  512  kubectl apply -f rest/rest-service.yaml
+  513  kubectl apply -f rest/logs-deployment.yaml
+  514  kubectl apply -f worker/worker-deployment.yaml
+  515  kubectl apply -f rest/rest-ingress.yaml
+  516  kubectl describe ingress my-ingress
+  517  kubectl get all
+  518  kubectl describe ingress my-ingress
+  519  kubectl get all
+  520  kubectl delete deployment --all
+  521  kubectl get all
+  522  kubectl delete svc --all
+  523  kubectl get all
+  524  kubectl apply -f redis/redis-deployment.yaml
+  525  kubectl apply -f redis/redis-service.yaml
+  526  kubectl apply -f rabbitmq/rabbitmq-deployment.yaml
+  527  kubectl apply -f rabbitmq/rabbitmq-service.yaml
+  528  kubectl apply -f rest/rest-deployment.yaml
+  529  kubectl apply -f rest/rest-service.yaml
+  530  kubectl get all
+  531  kubectl apply -f rest/logs-deployment.yaml
+  532  kubectl apply -f worker/worker-deployment.yaml
+  533  kubectl get all
+  534  kubectl apply -f rest/rest-ingress.yaml
+  535  kubectl describe ingress my-ingress
+  536  history > history_11_19.txt
